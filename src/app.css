@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --textColor: #5f5f5f;
+    --cardBackgroundColor: #fcfcfc;
+    --grayColor: #b8b8b8;
+    --grayLevel2Color: #777777;
+    --redColor: #f44336;
+    --aColor: rgb(64, 64, 204);
+}
+
+html {
+    margin: 0;
+    color: var(--textColor);
+    background-image: url(../public/images/background.jpg);
+    background-size: cover;
+}
+
+@font-face {
+    font-family: "GothicNeoEB";
+    src: url(../public/fonts/AppleSDGothicNeoEB.ttf);
+}
+
+.bold {
+    font-family: "GothicNeoEB";
+}
+
+.field {
+    background-color: var(--cardBackgroundColor);
+    box-sizing: border-box;
+}
+.warning_field {
+    background-color: var(--redColor);
+    box-sizing: border-box;
+    color: white;
+}
+
+.field:hover {
+    border-color: var(--grayLevel2Color);
+}
+
+.not_emphasized {
+    color: var(--grayColor);
+}
+
+a {
+    color: var(--aColor);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#graph {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#graph > thead > tr > th, #graph > tbody > tr > td {
+    font-weight: normal;
+    border: 1px solid black;
+    padding: 4px 10px 4px 10px;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    #graph > thead > tr > th, #graph > tbody > tr > td {
+        padding: 2.5px 5px 2.5px 5px;
+    }
+}
